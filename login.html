@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SelaScape</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="style.css">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -97,7 +97,7 @@
 
       <button type="submit">Login</button>
     </form>
-    <p>Don't have an account? <a href="sign.ejs">Sign up</a></p>
+    <p>Don't have an account? <a href="sign.html">Sign up</a></p>
   </div>
 
   <script>
@@ -128,7 +128,7 @@
       console.log('Login password:', password);
 
       loginForm.reset();
-      window.location.href = "inlog.ejs";  // Redirect to inlog.html after form validation
+      window.location.href = "inlog.html";  // Redirect to inlog.html after form validation
     });
 
     function validateEmail(email) {
