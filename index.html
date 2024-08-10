@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landscape Website</title>
-    <link rel="stylesheet" href="style.css">
+    <title>SelaScape</title>
+    <link rel="stylesheet" href="./css/style.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
@@ -165,12 +165,12 @@ body {
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="ser.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.ejs">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ser.ejs">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="con.html">Contact Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sign.html">Sign Up</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cont.ejs">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.ejs">Log In</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sign.ejs">Sign Up</a></li>
                 </ul>
                
             </div>
@@ -225,7 +225,7 @@ body {
                 <div class="property-content">
                     <h2 class="hdng">Irrigation Networks</h2>
                     <p class="villparagraph">Efficient and reliable irrigation solutions to keep your landscape lush and vibrant.</p>
-                    <a href="con.html" class="btn btn-outline-dark">contact us <span class="material-symbols-outlined">arrow_right_alt</span></a>
+                    <a href="cont.ejs" class="btn btn-outline-dark">contact us <span class="material-symbols-outlined">arrow_right_alt</span></a>
                 </div>
             </div>
         </div>
@@ -235,7 +235,7 @@ body {
                 <div class="property-content">
                     <h2 class="hdng">Lighting Fixtures</h2>
                     <p class="villparagraph">Illuminate your outdoor space with our elegant and durable lighting fixtures.</p>
-                    <a href="con.html" class="btn btn-outline-dark">contact us <span class="material-symbols-outlined">arrow_right_alt</span></a>
+                    <a href="cont.ejs" class="btn btn-outline-dark">contact us <span class="material-symbols-outlined">arrow_right_alt</span></a>
                 </div>
             </div>
         </div>
@@ -245,7 +245,7 @@ body {
                 <div class="property-content">
                     <h2 class="hdng">Water Features</h2>
                     <p class="villparagraph">Add tranquility and beauty to your garden with our custom water features.</p>
-                    <a href="con.html" class="btn btn-outline-dark">contact us <span class="material-symbols-outlined">arrow_right_alt</span></a>
+                    <a href="cont.ejs" class="btn btn-outline-dark">contact us <span class="material-symbols-outlined">arrow_right_alt</span></a>
                 </div>
             </div>
         </div>
@@ -255,7 +255,7 @@ body {
                 <div class="property-content">
                     <h2 class="hdng">Sports Courts</h2>
                     <p class="villparagraph">Get the perfect sports court designed and built to your specifications.</p>
-                    <a href="con.html" class="btn btn-outline-dark">contact us <span class="material-symbols-outlined">arrow_right_alt</span></a>
+                    <a href="cont.ejs" class="btn btn-outline-dark">contact us <span class="material-symbols-outlined">arrow_right_alt</span></a>
                 </div>
             </div>
         </div>
@@ -326,7 +326,7 @@ body {
         
     </div>
     <div class="rate-button-container" style="display: flex; justify-content: center; margin-top: 20px;">
-        <a class="rate-button" href="rate.html">Rate Us Now</a>
+        <a class="rate-button" href="rate.ejs">Rate Us Now</a>
     </div>
 </div>
 
@@ -350,12 +350,9 @@ body {
         <div class="content">
             <p data-translate="discountCodes">100+ discount codes</p>
             <h4 data-translate="discoverDiscounts">Join rewards and discover amazing discounts on your booking</h4>
-            <form action="/join-reward" method="post">
-                <input type="hidden" name="userId" value="<%= user ? user._id : '' %>">
-                <input type="hidden" name="username" value="<%= user ? user.username : '' %>">
-                <input type="hidden" name="email" value="<%= user ? user.email : '' %>">
-                <button type="submit" id="joinReward"  class="my-button animate" >Join Rewards</button>
-            </form>
+          
+                <button type="submit" id="joinReward" class="my-button animate">Join Rewards</button>
+             
             <hr class="hr-line">
             <div class="reward-c">
                 <div class="reward-h3">
